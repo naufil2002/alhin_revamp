@@ -173,6 +173,18 @@
                 <!-- Main Menu End-->
               </div>
 
+
+              <div id="google_translate_element" style="display:none"></div>
+
+              <div class="lang-box text-center" id="langBox">
+  <select id="langSelect">
+    <option value="en">English</option>
+    <option value="ar">Arabic</option>
+    <option value="ru">Russian</option>
+    <option value="he">Hebrew</option>
+  </select>
+</div>
+
               <!-- <div class="menu-number">
                 <i class="flaticon-headphone"></i>
                 <a href="callto:+91 9390365017">+91 9390365017</a>
@@ -806,6 +818,29 @@
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/leaflet.min.js"></script>
     <script src="assets/js/appear.js"></script>
+
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="translate.js"></script>
+
+<script>
+function adjustLangBox() {
+  const box = document.getElementById("langBox");
+  if (!box) return;
+
+  if (window.innerWidth <= 990) {
+    box.style.marginTop = "-30px";
+    box.style.marginLeft = "35px";
+    box.style.textAlign = "center";
+  } else {
+    box.style.marginTop = "";
+    box.style.marginLeft = "";
+  }
+}
+
+window.addEventListener("load", adjustLangBox);
+window.addEventListener("resize", adjustLangBox);
+</script>
+
 
     <!-- Custom script -->
     <script src="assets/js/script.js"></script>

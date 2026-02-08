@@ -482,6 +482,10 @@ input[type="submit"]:focus {
 
 }
 
+html[dir="rtl"] {
+  text-align: right;
+}
+
 
 @media screen and (max-width:786px) {
     .alhin-logo{
