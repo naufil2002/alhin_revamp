@@ -1,4 +1,3 @@
-// Google init function (global hona chahiye)
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
     {
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
   langSelect.addEventListener("change", function () {
     const lang = this.value;
 
-    // wait till google combo loads
     const timer = setInterval(() => {
       const combo = document.querySelector(".goog-te-combo");
       if (combo) {
@@ -27,9 +25,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }, 300);
 
-    // RTL support
     if (lang === "ar" || lang === "he") {
-      document.documentElement.dir = "rtl";
+      if (window.innerWidth > 991) {
+        document.documentElement.dir = "rtl";
+      } else {
+        document.documentElement.dir = "ltr";
+      }
     } else {
       document.documentElement.dir = "ltr";
     }
