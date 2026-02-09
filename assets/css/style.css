@@ -2401,7 +2401,7 @@ html[dir="rtl"] {
   display: flex;
   align-items: stretch;
   gap: 10px !important;
-  position: relative; /* required for arrow absolute centering */
+  position: relative; 
 }
 
 /* Individual Slide */
@@ -2409,7 +2409,7 @@ html[dir="rtl"] {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  padding: 10px; /* optional spacing between slides */
+  padding: 10px;
 }
 
 /* Card Styling */
@@ -2485,14 +2485,13 @@ html[dir="rtl"] {
   right: -50px;
 }
 
-/* 606px se niche */
 @media (max-width: 606px) {
   .slick-prev {
-    left: -30px;   /* adjust kar le */
+    left: -30px; 
   }
 
   .slick-next {
-    right: -30px;  /* adjust kar le */
+    right: -30px;  
   }
 }
 

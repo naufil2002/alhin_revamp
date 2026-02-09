@@ -1287,11 +1287,11 @@
       document.addEventListener("DOMContentLoaded", function () {
         const carousel = document.querySelector("#heroCarousel");
         const bsCarousel = new bootstrap.Carousel(carousel, {
-          interval: 5000, // 5 seconds (you can change this)
+          interval: 5000, 
           ride: "carousel",
         });
 
-        // Optional: Manually trigger prev/next (if controls are custom/non-functional)
+        
         document
           .querySelector(".carousel-control-prev")
           .addEventListener("click", function () {
@@ -1401,7 +1401,7 @@
           success: function (res) {
             console.log(res);
 
-            // Show SweetAlert with OK button
+            
             swal({
               title: "Success",
               text: "Message sent!",
@@ -1416,7 +1416,7 @@
                 },
               },
             }).then(() => {
-              // ✅ Clear input fields after clicking OK
+              
               document.getElementById("full-name").value = "";
               document.getElementById("email-address").value = "";
               document.getElementById("phone-number").value = "";
